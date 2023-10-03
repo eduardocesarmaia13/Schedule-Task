@@ -20,7 +20,7 @@ public class ScheduledTaskApplication {
 		SpringApplication.run(ScheduledTaskApplication.class, args);
 	}
 
-	@Scheduled(fixedRate = 2000L)
+	@Scheduled(fixedDelay = 2000L, initialDelay = 2000L)
 	public void job() throws InterruptedException {
 		logger.info("Job Current Time" + new Date());
 		Thread.sleep(1000L);
